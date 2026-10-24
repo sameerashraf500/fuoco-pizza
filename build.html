@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Build your pizza — FUOCO</title>
+    <meta name="description" content="Build your own wood-fired pizza: size, crust, sauce and toppings." />
+    <meta name="theme-color" content="#120605" />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://images.unsplash.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Karla:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body data-page="build">
+    <div data-header></div>
+    <main>
+      <section class="page-head">
+        <p class="kicker rv">Build your own</p>
+        <h1 class="display rv">Your pizza, <span class="fire-text">your rules</span></h1>
+        <p class="lead rv">Choose every layer and watch it come together. Prices update as you go.</p>
+      </section>
+      <section class="page">
+        <div class="builder">
+          <div class="b-visual b-size-m" data-b-visual>
+            <svg viewBox="0 0 500 500" role="img" aria-label="Your pizza preview">
+              <defs>
+                <radialGradient id="dough" cx="50%" cy="50%" r="50%"><stop offset=".78" stop-color="#e6ad62"/><stop offset=".9" stop-color="#c47a33"/><stop offset="1" stop-color="#8a4818"/></radialGradient>
+                <radialGradient id="melt" cx="40%" cy="35%" r="70%"><stop offset="0" stop-color="#fff3bf"/><stop offset=".6" stop-color="#ffd25a"/><stop offset="1" stop-color="#f1a93a"/></radialGradient>
+                <filter id="wob"><feTurbulence type="fractalNoise" baseFrequency=".02" numOctaves="2" seed="4"/><feDisplacementMap in="SourceGraphic" scale="22"/></filter>
+                <filter id="char"><feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="1" seed="2" result="n"/><feColorMatrix in="n" values="0 0 0 0 .15  0 0 0 0 .05  0 0 0 0 0  0 0 0 -2.2 1.1" result="d"/><feComposite in="d" in2="SourceGraphic" operator="in"/></filter>
+              </defs>
+              <g class="b-pizza">
+                <ellipse cx="250" cy="262" rx="236" ry="236" fill="#000" opacity=".35" filter="blur(8px)"/>
+                <circle cx="250" cy="250" r="232" fill="url(#dough)"/>
+                <circle cx="250" cy="250" r="232" fill="#000" filter="url(#char)" opacity=".5"/>
+                <circle data-b-stuffed cx="250" cy="250" r="214" fill="none" stroke="#ffd25a" stroke-width="14" opacity="0" style="transition:opacity .4s"/>
+                <circle data-b-sauce cx="250" cy="250" r="196" fill="#c8321a" filter="url(#wob)" style="transition:fill .5s"/>
+                <circle cx="250" cy="250" r="184" fill="url(#melt)" filter="url(#wob)" opacity=".9"/>
+                <g data-b-tops></g>
+              </g>
+            </svg>
+            <p class="b-total" data-b-total>Rs 1,100</p>
+          </div>
+          <form class="b-panel" data-builder novalidate>
+            <fieldset><legend>1. Size</legend><div class="choices" data-b-sizes></div></fieldset>
+            <fieldset><legend>2. Crust</legend><div class="choices" data-b-crusts></div></fieldset>
+            <fieldset><legend>3. Sauce</legend><div class="choices" data-b-sauces></div></fieldset>
+            <fieldset><legend>4. Toppings <small class="muted" data-b-count>(0 / 9)</small></legend><div class="choices" data-b-tops-list></div></fieldset>
+            <div class="b-sum">
+              <p class="muted" data-b-desc>Medium 10&quot; · Classic · Tomato · Cheese only</p>
+              <div class="row">
+                <div class="qty" role="group" aria-label="Quantity"><button type="button" data-b-q="-1" aria-label="Fewer">&minus;</button><span data-b-qty>1</span><button type="button" data-b-q="1" aria-label="More">+</button></div>
+                <b data-b-price>Rs 1,100</b>
+              </div>
+              <div class="row" style="margin-top:12px">
+                <button type="submit" class="btn btn-fire" style="flex:1">Add to order</button>
+                <button type="button" class="btn btn-ghost" data-b-reset>Reset</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+    <div data-footer></div>
+    <script src="js/data.js"></script>
+    <script src="js/store.js"></script>
+    <script src="js/cards.js"></script>
+    <script src="js/pages.js"></script>
+    <script src="js/build.js"></script>
+  </body>
+</html>

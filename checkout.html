@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Checkout — FUOCO</title>
+    <meta name="description" content="Checkout your Fuoco order." />
+    <meta name="theme-color" content="#120605" />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://images.unsplash.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Karla:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body data-page="checkout">
+    <div data-header></div>
+    <main>
+      <section class="page">
+        <p class="kicker">Checkout</p>
+        <h1 class="display" style="margin-bottom:40px">Send it to <span class="fire-text">the oven</span></h1>
+        <div class="cart-grid">
+          <form class="co-form" data-checkout novalidate>
+            <div class="mode">
+              <label class="choice"><input type="radio" name="mode" value="delivery" checked /><span><b>Delivery</b><small>About 30 min &middot; Rs 150</small></span></label>
+              <label class="choice"><input type="radio" name="mode" value="pickup" /><span><b>Pickup</b><small>Ready in 15 min &middot; free</small></span></label>
+            </div>
+            <fieldset>
+              <legend>Your details</legend>
+              <div class="field-row">
+                <div class="field" data-field><label for="o-name">Full name</label><input id="o-name" required autocomplete="name" /><p class="ferr"></p></div>
+                <div class="field" data-field><label for="o-phone">Mobile</label><input id="o-phone" required data-type="phone" inputmode="tel" autocomplete="tel" placeholder="0300 1234567" /><p class="ferr"></p></div>
+              </div>
+              <div class="field" data-field><label for="o-email">Email for the receipt (optional)</label><input id="o-email" type="email" autocomplete="email" /><p class="ferr"></p></div>
+            </fieldset>
+            <fieldset data-delivery>
+              <legend>Delivery address</legend>
+              <div class="field-row">
+                <div class="field" data-field><label for="o-area">Area</label><select id="o-area" required><option value="">Choose your area</option><option>Gujrat City</option><option>Shadman Colony</option><option>Model Town</option><option>Rehman Shaheed Road</option><option>Jalalpur Jattan Road</option><option>Kunjah Road</option></select><p class="ferr"></p></div>
+                <div class="field" data-field><label for="o-street">House and street</label><input id="o-street" required autocomplete="street-address" /><p class="ferr"></p></div>
+              </div>
+              <div class="field" data-field><label for="o-notes">Directions for the rider (optional)</label><input id="o-notes" placeholder="Near the green gate, second floor" /><p class="ferr"></p></div>
+            </fieldset>
+            <fieldset>
+              <legend>When</legend>
+              <div class="field" data-field><label for="o-time">Time</label><select id="o-time" data-time></select><p class="ferr"></p></div>
+            </fieldset>
+            <fieldset>
+              <legend>Payment</legend>
+              <label class="pay"><input type="radio" name="pay" value="Cash on delivery" checked /><span><b>Cash on delivery</b><small>Pay the rider or at the counter.</small></span></label>
+              <label class="pay"><input type="radio" name="pay" value="Card on delivery" /><span><b>Card on delivery</b><small>The rider brings a card machine.</small></span></label>
+              <label class="pay"><input type="radio" name="pay" value="Bank transfer" /><span><b>Bank transfer</b><small>We send the account details by SMS.</small></span></label>
+            </fieldset>
+            <button type="submit" class="btn btn-fire btn-block" data-place>Place order</button>
+            <p class="muted" style="margin-top:12px;font-size:.85rem">This is a concept site. No real order is placed and nothing is charged.</p>
+          </form>
+          <aside class="summary">
+            <h2>Your order</h2>
+            <div data-co-lines></div>
+            <form class="promo" data-promo style="margin-top:16px"><input placeholder="Promo code" aria-label="Promo code" data-promo-in /><button class="btn btn-ghost" type="submit">Apply</button></form>
+            <p class="promo-msg" data-promo-msg></p>
+            <dl class="totals" data-totals></dl>
+          </aside>
+        </div>
+      </section>
+    </main>
+    <div data-footer></div>
+    <script src="js/data.js"></script>
+    <script src="js/store.js"></script>
+    <script src="js/cards.js"></script>
+    <script src="js/pages.js"></script>
+  </body>
+</html>

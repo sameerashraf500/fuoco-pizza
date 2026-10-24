@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Find us — FUOCO</title>
+    <meta name="description" content="Address, opening hours and contact for Fuoco wood-fired pizza in Gujrat." />
+    <meta name="theme-color" content="#120605" />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://images.unsplash.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Karla:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body data-page="contact">
+    <div data-header></div>
+    <main>
+      <section class="page-head">
+        <p class="kicker rv">Find us</p>
+        <h1 class="display rv">Come for <span class="fire-text">the fire</span></h1>
+        <p class="lead rv">Eat in by the oven, pick up, or have it delivered across Gujrat.</p>
+      </section>
+      <section class="page">
+        <div class="contact-grid">
+          <div>
+            <div class="map rv"><iframe title="Map of Gujrat" loading="lazy" src="https://www.openstreetmap.org/export/embed.html?bbox=74.045%2C32.555%2C74.105%2C32.595&amp;layer=mapnik&amp;marker=32.5742%2C74.0789"></iframe></div>
+            <div class="info-list">
+              <div class="rv"><p class="kicker">Address</p><p>GT Road, near Shah Daula Chowk, Gujrat, Punjab</p></div>
+              <div class="rv"><p class="kicker">Call or WhatsApp</p><p>0300 000 0000 (demo number)</p></div>
+              <div class="rv"><p class="kicker">Opening hours</p><div class="hours"><span><b>Mon &ndash; Thu</b><span>12:00 pm &ndash; 12:00 am</span></span><span><b>Fri &ndash; Sun</b><span>12:00 pm &ndash; 1:00 am</span></span></div></div>
+            </div>
+          </div>
+          <form class="form-card rv" data-contact novalidate>
+            <h2>Send a message</h2>
+            <div class="field-row">
+              <div class="field" data-field><label for="c-name">Name</label><input id="c-name" required autocomplete="name" /><p class="ferr"></p></div>
+              <div class="field" data-field><label for="c-phone">Mobile</label><input id="c-phone" required data-type="phone" inputmode="tel" autocomplete="tel" placeholder="0300 1234567" /><p class="ferr"></p></div>
+            </div>
+            <div class="field" data-field><label for="c-email">Email (optional)</label><input id="c-email" type="email" autocomplete="email" /><p class="ferr"></p></div>
+            <div class="field" data-field><label for="c-topic">Topic</label><select id="c-topic" required><option value="">Choose one</option><option>Party or event order</option><option>Feedback on an order</option><option>Catering</option><option>Something else</option></select><p class="ferr"></p></div>
+            <div class="field" data-field><label for="c-msg">Message</label><textarea id="c-msg" rows="4" required minlength="10"></textarea><p class="ferr"></p></div>
+            <button type="submit" class="btn btn-fire btn-block">Send message</button>
+            <p class="muted" data-c-done hidden style="margin-top:14px"></p>
+          </form>
+        </div>
+        <div class="faq" id="faq">
+          <h2 class="display center rv" style="margin-bottom:30px">Good <span class="fire-text">questions</span></h2>
+          <div class="acc rv"><button type="button" aria-expanded="false">How long does delivery take?<i></i></button><div class="acc-body"><p>About 30 minutes inside Gujrat city. Busy Friday nights can take a little longer, and the tracker will tell you.</p></div></div>
+          <div class="acc rv"><button type="button" aria-expanded="false">Is delivery free?<i></i></button><div class="acc-body"><p>Delivery is Rs 150, and free on orders over Rs 2,500. Pickup is always free.</p></div></div>
+          <div class="acc rv"><button type="button" aria-expanded="false">Is your meat halal?<i></i></button><div class="acc-body"><p>Yes. All our chicken and beef are halal and come from local suppliers.</p></div></div>
+          <div class="acc rv"><button type="button" aria-expanded="false">Do you cater parties?<i></i></button><div class="acc-body"><p>We do, from birthdays to office lunches. Send us a message with your date and headcount.</p></div></div>
+          <div class="acc rv"><button type="button" aria-expanded="false">How do I pay?<i></i></button><div class="acc-body"><p>Cash or card on delivery, or bank transfer. Choose at checkout.</p></div></div>
+        </div>
+      </section>
+    </main>
+    <div data-footer></div>
+    <script src="js/data.js"></script>
+    <script src="js/store.js"></script>
+    <script src="js/cards.js"></script>
+    <script src="js/pages.js"></script>
+  </body>
+</html>

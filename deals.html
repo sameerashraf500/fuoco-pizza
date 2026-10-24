@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Deals — FUOCO</title>
+    <meta name="description" content="Tonight's pizza deals and combos." />
+    <meta name="theme-color" content="#120605" />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://images.unsplash.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Karla:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body data-page="deals">
+    <div data-header></div>
+    <main>
+      <section class="page-head">
+        <p class="kicker rv">Tonight only</p>
+        <h1 class="display rv">Hot <span class="fire-text">deals</span></h1>
+        <p class="lead rv">Bundles for one, two or the whole family. Prices refresh at midnight.</p>
+      </section>
+      <section class="page">
+        <div class="sec-head"><p class="countdown">These deals end in <b data-countdown>00:00:00</b></p><p class="muted">Use code <b>FIRE20</b> at checkout for 20% off menu items.</p></div>
+        <div class="deals" data-deals></div>
+        <div class="build-band" style="margin:80px 0 0">
+          <div><p class="kicker">Promo codes</p><h2 class="display">Save a little <span class="fire-text">more</span></h2><p class="lead">FIRE20 takes 20% off any order. New here? FIRST10 takes 10% off your first one. One code per order.</p></div>
+          <div class="row" style="justify-content:center"><a href="menu.html" class="btn btn-fire">Order from the menu</a><a href="build.html" class="btn btn-ghost">Build your own</a></div>
+        </div>
+      </section>
+    </main>
+    <div data-footer></div>
+    <script src="js/data.js"></script>
+    <script src="js/store.js"></script>
+    <script src="js/cards.js"></script>
+    <script src="js/pages.js"></script>
+  </body>
+</html>

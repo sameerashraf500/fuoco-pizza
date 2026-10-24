@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>FUOCO — Wood-fired Pizza, Gujrat</title>
+    <meta name="description" content="Wood-fired pizza with 48-hour dough, baked at 450°C in 90 seconds. Order online, build your own pizza or grab a deal." />
+    <meta name="theme-color" content="#120605" />
+    <meta property="og:title" content="FUOCO — Wood-fired Pizza" />
+    <meta property="og:description" content="Born in fire. Order wood-fired pizza online in Gujrat." />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://images.unsplash.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Karla:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body data-page="home">
+    <div class="loader" aria-hidden="true"><div class="loader-pizza"><i></i><i></i><i></i><i></i></div><p>FUOCO</p></div>
+    <div data-header></div>
+
+    <main>
+      <!-- hero slider -->
+      <section class="hero" data-hero aria-roledescription="carousel" aria-label="Signature pizzas">
+        <canvas class="embers" aria-hidden="true"></canvas>
+        <div class="hero-glow" aria-hidden="true"></div>
+        <h1 class="hero-word" data-word aria-label="Full of fire" aria-live="polite">FULL OF FIRE</h1>
+
+        <div class="stage" data-stage>
+          <div class="halo" aria-hidden="true"></div>
+          <div class="pizza-wrap" data-pizza-wrap>
+            <div class="pizza" data-pizza><img alt="" data-pizza-img /></div>
+            <div class="pizza pizza-out" data-pizza-out aria-hidden="true"><img alt="" /></div>
+          </div>
+          <!-- melted cheese: blobs merged by an SVG "goo" filter -->
+          <svg class="cheese" viewBox="0 0 600 420" preserveAspectRatio="none" aria-hidden="true">
+            <defs>
+              <filter id="goo" x="-20%" y="-40%" width="140%" height="180%">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="14" result="b" />
+                <feColorMatrix in="b" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 26 -11" />
+              </filter>
+              <linearGradient id="cheeseG" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#ffe58a" />
+                <stop offset=".55" stop-color="#ffc83d" />
+                <stop offset="1" stop-color="#f29a16" />
+              </linearGradient>
+            </defs>
+            <g filter="url(#goo)" fill="url(#cheeseG)">
+              <path class="cheese-sheet" d="M0 120 C120 60 220 150 330 110 S520 40 600 90 L600 420 L0 420 Z" />
+              <circle class="drip d1" cx="90" cy="150" r="26" />
+              <circle class="drip d2" cx="210" cy="160" r="20" />
+              <circle class="drip d3" cx="330" cy="140" r="30" />
+              <circle class="drip d4" cx="450" cy="110" r="22" />
+              <circle class="drip d5" cx="540" cy="120" r="18" />
+            </g>
+            <g class="cheese-shine">
+              <path d="M40 150 C140 100 220 170 320 135" />
+              <path d="M380 120 C440 95 500 92 560 105" />
+            </g>
+          </svg>
+          <!-- floating ingredients -->
+          <div class="float f1" data-depth="0.6"><svg viewBox="0 0 64 64"><path class="leaf" d="M8 50C10 22 34 6 58 8 56 34 38 56 8 50Z" /><path class="vein" d="M10 48 54 10" /></svg></div>
+          <div class="float f2" data-depth="1"><svg viewBox="0 0 64 64"><circle class="pep" cx="32" cy="32" r="26" /><circle class="pep-dot" cx="24" cy="26" r="3" /><circle class="pep-dot" cx="38" cy="36" r="2.5" /><circle class="pep-dot" cx="30" cy="42" r="2" /></svg></div>
+          <div class="float f3" data-depth="0.8"><svg viewBox="0 0 64 64"><path class="chili" d="M14 14c10 2 14 10 18 20s10 18 22 22c-14 4-30-2-36-16S8 20 14 14Z" /><path class="stem" d="M14 14c-2-4-6-6-8-5" /></svg></div>
+          <div class="float f4" data-depth="1.2"><svg viewBox="0 0 64 64"><circle class="tom" cx="32" cy="32" r="26" /><circle class="tom-in" cx="32" cy="32" r="19" /><path class="tom-seed" d="M32 16v10M32 38v10M18 32h10M36 32h10" /></svg></div>
+          <div class="float f5" data-depth="0.5"><svg viewBox="0 0 64 64"><path class="leaf" d="M8 50C10 22 34 6 58 8 56 34 38 56 8 50Z" /><path class="vein" d="M10 48 54 10" /></svg></div>
+        </div>
+
+        <div class="hero-info">
+          <p class="kicker"><span data-slide-num>01</span> / 03 &middot; Signature</p>
+          <h2 class="hero-name" data-name>Pepperoni Inferno</h2>
+          <p class="hero-desc" data-desc>Double beef pepperoni, fior di latte and chilli honey.</p>
+          <div class="row">
+            <button type="button" class="btn btn-fire" data-hero-add>Order now &middot; <span data-hero-price>Rs 1,650</span></button>
+            <a href="build.html" class="btn btn-ghost">Customize</a>
+          </div>
+        </div>
+
+        <div class="hero-ctrl">
+          <button type="button" class="arrow" data-prev aria-label="Previous pizza"><svg viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6" /></svg></button>
+          <div class="dots" data-dots role="tablist" aria-label="Choose a pizza"></div>
+          <button type="button" class="arrow" data-next aria-label="Next pizza"><svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6" /></svg></button>
+        </div>
+        <div class="hero-meta">
+          <p><b>450&deg;C</b>oven</p>
+          <p><b>90s</b>bake</p>
+          <p><b>30 min</b>delivery</p>
+        </div>
+      </section>
+
+      <!-- why -->
+      <section class="perks">
+        <div class="perk rv"><span>01</span><h3>48-hour dough</h3><p>Slow-fermented for a light, blistered crust.</p></div>
+        <div class="perk rv"><span>02</span><h3>Real wood fire</h3><p>450&deg;C, 90 seconds, a leopard-spotted base.</p></div>
+        <div class="perk rv"><span>03</span><h3>Fresh mozzarella</h3><p>Delivered every morning, never frozen.</p></div>
+        <div class="perk rv"><span>04</span><h3>Hot in 30 minutes</h3><p>Insulated boxes, straight from the oven to you.</p></div>
+      </section>
+
+      <!-- bestsellers -->
+      <section class="section">
+        <div class="sec-head">
+          <div><p class="kicker rv">Bestsellers</p><h2 class="display rv">Straight from <span class="fire-text">the fire</span></h2></div>
+          <a href="menu.html" class="btn btn-ghost rv">Full menu</a>
+        </div>
+        <div class="cards" data-best></div>
+      </section>
+
+      <!-- build your own -->
+      <section class="build-band">
+        <div class="build-copy">
+          <p class="kicker rv">Your pizza, your rules</p>
+          <h2 class="display rv">Build it <span class="fire-text">from scratch</span></h2>
+          <p class="lead rv">Pick a size, a crust, a sauce and up to nine toppings. Watch it come together, then send it to the oven.</p>
+          <a href="build.html" class="btn btn-fire rv">Start building</a>
+        </div>
+        <div class="build-visual rv" aria-hidden="true">
+          <div class="mini-pizza">
+            <span class="mp-dough"></span><span class="mp-sauce"></span><span class="mp-cheese"></span>
+            <i class="t t1"></i><i class="t t2"></i><i class="t t3"></i><i class="t t4"></i><i class="t t5"></i><i class="t t6"></i><i class="t t7"></i><i class="t t8"></i>
+            <b class="l l1"></b><b class="l l2"></b><b class="l l3"></b>
+          </div>
+        </div>
+      </section>
+
+      <!-- deals -->
+      <section class="section">
+        <div class="sec-head">
+          <div><p class="kicker rv">Tonight only</p><h2 class="display rv">Hot <span class="fire-text">deals</span></h2></div>
+          <p class="countdown rv">Ends in <b data-countdown>00:00:00</b></p>
+        </div>
+        <div class="deals" data-deals></div>
+      </section>
+
+      <!-- how it works -->
+      <section class="section steps-sec">
+        <p class="kicker rv center">How it works</p>
+        <h2 class="display rv center">Three steps to <span class="fire-text">happy</span></h2>
+        <ol class="steps">
+          <li class="rv"><span>1</span><h3>Choose</h3><p>Pick from the menu or build your own pizza.</p></li>
+          <li class="rv"><span>2</span><h3>We fire it</h3><p>Stretched by hand and baked for 90 seconds at 450&deg;C.</p></li>
+          <li class="rv"><span>3</span><h3>Eat it hot</h3><p>Delivered in about 30 minutes, or ready for pickup.</p></li>
+        </ol>
+      </section>
+
+      <!-- story -->
+      <section class="story">
+        <div class="story-img rv"><img src="https://images.unsplash.com/photo-1579751626657-72bc17010498?auto=format&fit=crop&q=80&w=1200" alt="Pizza baking in a wood-fired oven" loading="lazy" /></div>
+        <div class="story-copy">
+          <p class="kicker rv">Our story</p>
+          <h2 class="display rv">One oven. <span class="fire-text">One obsession.</span></h2>
+          <p class="lead rv">Fuoco started with a single brick oven and a simple rule: if it isn't fresh, it doesn't go on the pizza. Every base is stretched by hand and every pizza meets real fire.</p>
+          <a href="about.html" class="btn btn-ghost rv">Read our story</a>
+        </div>
+      </section>
+    </main>
+
+    <div data-footer></div>
+    <script src="js/data.js"></script>
+    <script src="js/store.js"></script>
+    <script src="js/cards.js"></script>
+    <script src="js/home.js"></script>
+  </body>
+</html>

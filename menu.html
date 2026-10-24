@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Menu — FUOCO Wood-fired Pizza</title>
+    <meta name="description" content="Wood-fired pizzas, sides, drinks and desserts. Order online." />
+    <meta name="theme-color" content="#120605" />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://images.unsplash.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Karla:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body data-page="menu">
+    <div data-header></div>
+    <main>
+      <section class="page-head">
+        <p class="kicker rv">The menu</p>
+        <h1 class="display rv">Fresh from <span class="fire-text">the fire</span></h1>
+        <p class="lead rv">Eight wood-fired pizzas, three sides, cold drinks and something sweet. Pizzas come in three sizes.</p>
+      </section>
+      <section class="page">
+        <div class="toolbar">
+          <div class="tabs" data-tabs role="tablist" aria-label="Categories"></div>
+          <div class="row">
+            <div class="filters">
+              <label><input type="checkbox" data-f-veg /> Veg only</label>
+              <label><input type="checkbox" data-f-hot /> Spicy</label>
+            </div>
+            <label class="search"><span class="sr" hidden>Search</span><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input type="search" placeholder="Search the menu" data-search aria-label="Search the menu" /></label>
+          </div>
+        </div>
+        <div data-menu-list></div>
+        <p class="no-results" data-none hidden>Nothing matches that. Try another word or clear the filters.</p>
+      </section>
+    </main>
+    <div data-footer></div>
+    <script src="js/data.js"></script>
+    <script src="js/store.js"></script>
+    <script src="js/cards.js"></script>
+    <script src="js/pages.js"></script>
+  </body>
+</html>

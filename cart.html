@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Your order — FUOCO</title>
+    <meta name="description" content="Review your Fuoco pizza order." />
+    <meta name="theme-color" content="#120605" />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://images.unsplash.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Karla:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body data-page="cart">
+    <div data-header></div>
+    <main>
+      <section class="page">
+        <p class="kicker">Your order</p>
+        <h1 class="display" style="margin-bottom:40px">Almost <span class="fire-text">ready</span></h1>
+        <div class="cart-grid">
+          <div data-cart-lines></div>
+          <aside class="summary" data-summary>
+            <h2>Summary</h2>
+            <form class="promo" data-promo><input placeholder="Promo code" aria-label="Promo code" data-promo-in /><button class="btn btn-ghost" type="submit">Apply</button></form>
+            <p class="promo-msg" data-promo-msg></p>
+            <dl class="totals" data-totals></dl>
+            <a href="checkout.html" class="btn btn-fire btn-block" data-to-checkout>Go to checkout</a>
+            <a href="menu.html" class="btn btn-ghost btn-block">Add more</a>
+          </aside>
+        </div>
+      </section>
+    </main>
+    <div data-footer></div>
+    <script src="js/data.js"></script>
+    <script src="js/store.js"></script>
+    <script src="js/cards.js"></script>
+    <script src="js/pages.js"></script>
+  </body>
+</html>
